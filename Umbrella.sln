@@ -5,6 +5,7 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".root", ".root", "{5D5A5E5A-9EDD-4662-9987-336DE3B1BC48}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		.gitignore = .gitignore
 		directory.build.props = directory.build.props
 		LICENSE = LICENSE
@@ -26,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D870B3CC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Umbrella.Native.Framework", "source\Umbrella.Native.Framework\Umbrella.Native.Framework.csproj", "{25E8BC19-9EFE-45E6-A026-0DA62F7FE3D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbrella.Native.Framework.Tests", "tests\Umbrella.Native.Framework.Tests\Umbrella.Native.Framework.Tests.csproj", "{BFB0B69A-C06B-434A-BE6C-810FCB2F7491}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,12 +39,17 @@ Global
 		{25E8BC19-9EFE-45E6-A026-0DA62F7FE3D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25E8BC19-9EFE-45E6-A026-0DA62F7FE3D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25E8BC19-9EFE-45E6-A026-0DA62F7FE3D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFB0B69A-C06B-434A-BE6C-810FCB2F7491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFB0B69A-C06B-434A-BE6C-810FCB2F7491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFB0B69A-C06B-434A-BE6C-810FCB2F7491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFB0B69A-C06B-434A-BE6C-810FCB2F7491}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{25E8BC19-9EFE-45E6-A026-0DA62F7FE3D0} = {C3587C80-A5FE-4B98-85B4-FB64A2C66661}
+		{BFB0B69A-C06B-434A-BE6C-810FCB2F7491} = {D870B3CC-3DAA-4955-A234-2B9EAAD78F92}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {70494334-E411-4A14-94DC-69C48FAD916E}
