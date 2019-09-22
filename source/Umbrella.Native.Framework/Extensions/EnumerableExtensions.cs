@@ -1,11 +1,11 @@
 ﻿// ---------------------------------------------------------------------------------------------
-// <copyright file="IEnumerableExtensions.cs" company="Canon Games Studio">
+// <copyright file="EnumerableExtensions.cs" company="Canon Games Studio">
 // © 2019, Canon Games Studio. All rights reserved.
 // Licensed under the MIT license. See LICENSE in the project root for full license information.
 // </copyright>
 // ---------------------------------------------------------------------------------------------
 
-namespace Umbrella.Native.Framework
+namespace Umbrella.Native.Framework.Extensions
 {
     using System;
     using System.Collections;
@@ -16,7 +16,7 @@ namespace Umbrella.Native.Framework
     /// <summary>
     /// Common extensions for an object implementing <see cref="IEnumerable"/>.
     /// </summary>
-    public static class IEnumerableExtensions
+    public static class EnumerableExtensions
     {
         /// <summary>
         /// Performs the action on each item in the collection.
