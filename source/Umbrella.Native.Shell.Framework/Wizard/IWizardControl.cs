@@ -7,6 +7,7 @@
 
 namespace Umbrella.Native.Shell.Framework.Wizard
 {
+    using System.Collections.Generic;
     using System.Windows.Input;
 
     using Umbrella.Native.Shell.Framework.ViewModels;
@@ -35,5 +36,16 @@ namespace Umbrella.Native.Shell.Framework.Wizard
         /// Gets the view model for the current view on the wizard.
         /// </summary>
         ViewModelBase CurrentViewModel { get; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the wizard can return to the first/last page on Next/Previous from the last/first page.
+        /// </summary>
+        bool CanLoop { get; set; }
+
+        /// <summary>
+        /// Initializes the wizard and goes to the first view.
+        /// </summary>
+        /// <param name="viewModels">The ordered collection of view models to show in the wizard.</param>
+        void StartWizard(IEnumerable<ViewModelBase> viewModels);
     }
 }
