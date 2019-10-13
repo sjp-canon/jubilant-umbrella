@@ -7,7 +7,9 @@
 
 namespace Umbrella.Native.Shell.Framework
 {
+    using System;
     using System.ComponentModel;
+    using System.Linq.Expressions;
     using System.Runtime.CompilerServices;
 
     /// <summary>
@@ -23,17 +25,27 @@ namespace Umbrella.Native.Shell.Framework
         /// <summary>
         /// Sets the property value and raises the Property Changed event.
         /// </summary>
-        /// <typeparam name="TProperty">The type of the property being set.</typeparam>
-        /// <param name="oldValue">The original value of the property.</param>
-        /// <param name="newValue">The new value of the property.</param>
-        /// <param name="propertyName">The name of the property being set.</param>
         public void Set<TProperty>(ref TProperty oldValue, TProperty newValue, [CallerMemberName] string propertyName = null)
         {
             if (Equals(oldValue, newValue) == false)
             {
                 oldValue = newValue;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+                NotifyPropertyChanged(propertyName);
             }
+        }
+
+        /// <summary>
+        /// Notifies all listeners that the property's value has changed.
+        /// </summary>
+        public void NotifyPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
+        /// <summary>
+        /// Notifies all listeners that the property's value has changed.
+        /// </summary>
+        public void NotifyPropertyChanged<TProperty>(Expression<Func<TProperty>> projection)
+        {
+            var memberExpression = (MemberExpression)projection.Body;
+            NotifyPropertyChanged(memberExpression.Member.Name);
         }
     }
 }

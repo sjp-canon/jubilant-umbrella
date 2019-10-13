@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Umbrella.Data.Persistance\Umbrella.Data.Persistance.csproj" />
+    <ProjectReference Include="..\Umbrella.Native.Shell.Framework\Umbrella.Native.Shell.Framework.csproj" />
   </ItemGroup>
 
 </Project>
