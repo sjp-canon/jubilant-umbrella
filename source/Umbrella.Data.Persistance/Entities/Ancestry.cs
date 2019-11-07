@@ -25,8 +25,18 @@ namespace Umbrella.Data.Persistance.Entities
         public IDictionary<AbilityBonusTypes, Ability[]> AbilityAdjustments { get; }
 
         /// <summary>
+        /// Gets the size a creature with this ancestry is.
+        /// </summary>
+        public Sizes Size { get; }
+
+        /// <summary>
         /// Gets the number of hit points a character of this ancestry starts with.
         /// </summary>
         public uint HitPoints { get; }
+
+        /// <summary>
+        /// Gets the number of feet a character of this ancestry can move with a single move action while unencumbered.
+        /// </summary>
+        public uint SpeedInFeet { get; }
     }
 }

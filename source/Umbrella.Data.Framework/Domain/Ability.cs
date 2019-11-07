@@ -31,6 +31,16 @@ namespace Umbrella.Data.Framework.Domain
         }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="Ability"/> class.
+        /// </summary>
+        public Ability(string name, string description, uint score = 10)
+        {
+            Name = name;
+            Description = description;
+            Score = score;
+        }
+
+        /// <summary>
         /// Gets the name of this ability score.
         /// </summary>
         public string Name { get; }
