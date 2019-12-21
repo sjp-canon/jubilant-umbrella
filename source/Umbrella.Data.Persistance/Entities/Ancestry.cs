@@ -25,6 +25,16 @@ namespace Umbrella.Data.Persistance.Entities
         public IDictionary<AbilityBonusTypes, Ability[]> AbilityAdjustments { get; }
 
         /// <summary>
+        /// Gets a collection of <see cref="Feat"/>s this ancestry provides.
+        /// </summary>
+        public IList<Feat> Feats { get; }
+
+        /// <summary>
+        /// Gets the collection of <see cref="Languages"/> that adventurers of this ancestry can speak and read.
+        /// </summary>
+        public IList<Languages> Languages { get; }
+
+        /// <summary>
         /// Gets the size a creature with this ancestry is.
         /// </summary>
         public Sizes Size { get; }
