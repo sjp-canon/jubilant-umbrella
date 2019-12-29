@@ -8,6 +8,7 @@
 namespace Umbrella.Data.Framework.Domain
 {
     using System;
+    using System.Diagnostics.Contracts;
 
     using Umbrella.Native.Shell.Framework;
 
@@ -23,10 +24,12 @@ namespace Umbrella.Data.Framework.Domain
         /// </summary>
         public Ability(Persistance.Entities.Ability entity)
         {
-            var ability = entity ?? throw new ArgumentNullException(nameof(entity));
+            Contract.Requires<ArgumentNullException>(
+                entity != null,
+                nameof(entity));
 
-            Name = ability.Name;
-            Description = ability.Description;
+            Name = entity.Name;
+            Description = entity.Description;
             Score = 10;
         }
 
@@ -53,7 +56,7 @@ namespace Umbrella.Data.Framework.Domain
         /// <summary>
         /// Gets the text abbreviation for this ability.
         /// </summary>
-        public string Abbreviation => Name.Substring(0, 3).ToUpperInvariant();
+        public string Abbreviation => Name?.Substring(0, 3).ToUpperInvariant();
 
         /// <summary>
         /// Gets or sets the current score of this ability.

@@ -7,7 +7,6 @@
 
 namespace Umbrella.Data.Framework.Domain
 {
-    using Umbrella.Data.Persistance.Entities;
     using Umbrella.Native.Shell.Framework;
 
     /// <summary>
